@@ -1,4 +1,4 @@
-Build an Emacs package called jj-magit-lite.el.
+Build an Emacs package called majjit.el.
 
 Goal:
 Create a Magit-inspired UI for Jujutsu (`jj`) repositories, without modifying Magit itself.
@@ -9,25 +9,25 @@ Requirements:
 - Use magit-section to render a status buffer.
 - Use magit-process where appropriate, or process-file/call-process safely.
 - Detect jj repositories by walking upward for `.jj`.
-- Provide command `jj-magit-status`.
+- Provide command `majjit-status`.
 - Render:
   - current workspace/change from `jj log -r @ --no-graph`
   - recent log from `jj log -n 20`
   - summary from `jj status`
-- Provide transient command `jj-magit-dispatch` bound in the status buffer.
+- Provide transient command `majjit-dispatch` bound in the status buffer.
 - Implement commands:
-  - jj-magit-status
-  - jj-magit-log
-  - jj-magit-diff
-  - jj-magit-describe
-  - jj-magit-new
-  - jj-magit-squash
-  - jj-magit-split
-  - jj-magit-abandon
-  - jj-magit-bookmark-move
-  - jj-magit-git-fetch
-  - jj-magit-git-push
-  - jj-magit-undo
+  - majjit-status
+  - majjit-log
+  - majjit-diff
+  - majjit-describe
+  - majjit-new
+  - majjit-squash
+  - majjit-split
+  - majjit-abandon
+  - majjit-bookmark-move
+  - majjit-git-fetch
+  - majjit-git-push
+  - majjit-undo
 - Keep commands simple at first: prompt with completing-read/read-string where needed.
 - Do not attempt to emulate Git staging.
 - Include a minimal keymap:
@@ -39,5 +39,5 @@ Requirements:
   s squash
   u undo
   ? dispatch
-- Include package headers and provide feature `jj-magit-lite`.
+- Include package headers and provide feature `majjit`.
 - Prefer small, understandable functions over clever abstractions.
